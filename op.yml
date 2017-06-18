@@ -1,0 +1,56 @@
+name: github.com/opspec-pkgs/azure.storage.account.key.get
+description: gets an azure storage account key
+inputs:
+  subscriptionId:
+    string:
+      constraints: { minLength: 1 }
+      description: id of azure subscription
+  loginId:
+    string:
+      constraints: { minLength: 1 }
+      description: id of user, service principal, or app to login with
+  loginSecret:
+    string:
+      constraints: { minLength: 1 }
+      description: secret of user, service principal, or app to login with
+  resourceGroup:
+    string:
+      constraints: { minLength: 1 }
+      description: resource group of the storage account
+  storageAccount:
+    string:
+      constraints: { minLength: 3, maxLength: 24, pattern: '^[a-z0-9]+$' }
+      description: name of the storage account
+  key:
+    string:
+      constraints: { enum: [key1, key2] }
+      description: name of the key
+      default: key1
+  loginTenantId:
+    string:
+      constraints: { minLength: 1 }
+      description: tenant id of user, service principal, or app to login with
+      default: ' '
+  loginType:
+    string:
+      constraints: { enum: [user, sp]}
+      description: type of login; 'user' (default) or 'sp' for service principal
+      default: user
+outputs:
+  key:
+    string:
+      description: the storage account key
+run:
+  container:
+    image: { ref: 'azuresdk/azure-cli-python:0.2.10' }
+    cmd: [ /cmd.sh ]
+    files: { /cmd.sh }
+    envVars:
+      subscriptionId:
+      loginId:
+      loginSecret:
+      resourceGroup:
+      storageAccount:
+      key:
+      loginTenantId:
+      loginType:
