@@ -28,7 +28,7 @@ az account set --subscription "$subscriptionId"
 value=$(az storage account keys list \
     --account-name "$storageAccount" \
     --resource-group "$resourceGroup" \
-    --query "[?keyName=='$key'].value|[0]" \
+    --query "[?keyName=='$name'].value|[0]" \
     --output tsv)
 
-echo "key=$value"
+echo "value=$value"

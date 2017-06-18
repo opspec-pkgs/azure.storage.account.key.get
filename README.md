@@ -30,10 +30,10 @@ run:
       resourceGroup:
       storageAccount:
       # begin optional args
-      key:
+      name:
       loginTenantId:
       loginType:
       # end optional args
     outputs:
-      key:
+      value:
 ```
