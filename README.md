@@ -20,22 +20,21 @@ opctl run github.com/opspec-pkgs/azure.storage.account.key.get#VERSION
 ## compose
 
 ```yaml
-run:
-  op:
-    pkg: { ref: github.com/opspec-pkgs/azure.storage.account.key.get#VERSION }
-    inputs:
-      subscriptionId:
-      loginId:
-      loginSecret:
-      resourceGroup:
-      storageAccount:
-      # begin optional args
-      name:
-      loginTenantId:
-      loginType:
-      # end optional args
-    outputs:
-      value:
+op:
+  pkg: { ref: github.com/opspec-pkgs/azure.storage.account.key.get#VERSION }
+  inputs:
+    subscriptionId:
+    loginId:
+    loginSecret:
+    resourceGroup:
+    storageAccount:
+    # begin optional args
+    name:
+    loginTenantId:
+    loginType:
+    # end optional args
+  outputs:
+    value:
 ```
 
 # Support
