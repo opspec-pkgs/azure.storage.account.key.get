@@ -13,6 +13,7 @@ inputs:
     string:
       constraints: { minLength: 1 }
       description: secret of user, service principal, or app to login with
+      isSecret: true
   resourceGroup:
     string:
       constraints: { minLength: 1 }
@@ -40,13 +41,15 @@ outputs:
   value:
     string:
       description: value of the storage account key
+      isSecret: true
+version: 2.0.0
 run:
   container:
     image: { ref: 'azuresdk/azure-cli-python:0.2.10' }
     cmd: [ /cmd.sh ]
-    files: { /cmd.sh }
-    stdOut:
-      value=: value
+    files:
+      /cmd.sh:
+      /value: $(value)
     envVars:
       subscriptionId:
       loginId:

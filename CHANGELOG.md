@@ -5,5 +5,16 @@ All notable changes will be documented in this file in accordance with
 
 ## \[Unreleased]
 
+## \[2.0.0] - 2017-09-30
+
+### Changed
+
+- updated to opspec 0.1.5 format
+
+### Fixed
+
+- value written to std out
+- [loginSecret needs to be secret](https://github.com/opspec-pkgs/azure.storage.account.key.get/issues/1)
+
 ## \[1.0.0] - 2017-06-17
 

@@ -25,10 +25,8 @@ echo "setting default subscription"
 az account set --subscription "$subscriptionId"
 ### end login
 
-value=$(az storage account keys list \
+az storage account keys list \
     --account-name "$storageAccount" \
     --resource-group "$resourceGroup" \
     --query "[?keyName=='$name'].value|[0]" \
-    --output tsv)
-
-echo "value=$value"
+    --output tsv > /value
