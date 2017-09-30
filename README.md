@@ -1,9 +1,12 @@
 [![Build Status](https://travis-ci.org/opspec-pkgs/azure.storage.account.key.get.svg?branch=master)](https://travis-ci.org/opspec-pkgs/azure.storage.account.key.get)
-[![opspec 0.1.5](https://img.shields.io/badge/opspec-0.1.5-brightgreen.svg?colorA=6b6b6b&colorB=fc16be)](https://opspec.io/0.1.5/packages.html)
 
 # Problem statement
 
 gets an azure storage account key
+
+# Format
+
+this version of the pkg is in [![opspec 0.1.5](https://img.shields.io/badge/opspec-0.1.5-brightgreen.svg?colorA=6b6b6b&colorB=fc16be)](https://opspec.io/0.1.5/packages.html) format
 
 # Example usage
 
