@@ -29,4 +29,4 @@ az storage account keys list \
     --account-name "$storageAccount" \
     --resource-group "$resourceGroup" \
     --query "[?keyName=='$name'].value|[0]" \
-    --output tsv > /value
+    --output tsv | tr -d '\n' > /value
