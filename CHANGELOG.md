@@ -5,6 +5,12 @@ All notable changes will be documented in this file in accordance with
 
 ## \[Unreleased]
 
+## \[2.0.0] - 2017-12-04
+
+### Fixed
+
+- returned key ends w/ newline
+
 ## \[2.0.0] - 2017-09-30
 
 ### Changed
