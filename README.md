@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/opspec-pkgs/azure.storage.account.key.get.svg?branch=master)](https://travis-ci.org/opspec-pkgs/azure.storage.account.key.get)
 
+<img src="icon.svg" alt="icon" height="100px">
+
 # Problem statement
 
 gets an azure storage account key
@@ -10,19 +12,19 @@ this version of the pkg is in [![opspec 0.1.5](https://img.shields.io/badge/opsp
 
 # Example usage
 
-## install
+## Install
 
 ```shell
 opctl pkg install github.com/opspec-pkgs/azure.storage.account.key.get#2.0.1
 ```
 
-## run
+## Run
 
 ```
 opctl run github.com/opspec-pkgs/azure.storage.account.key.get#2.0.1
 ```
 
-## compose
+## Compose
 
 ```yaml
 op:
@@ -33,11 +35,10 @@ op:
     loginSecret:
     resourceGroup:
     storageAccount:
-    # begin optional args
+    # params w/ default
     name:
     loginTenantId:
     loginType:
-    # end optional args
   outputs:
     value:
 ```
